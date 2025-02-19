@@ -1,0 +1,65 @@
+h1,h2,h3,h4,h5,h6 {
+    text-shadow: 1.5pt 1.5pt gray;
+}
+
+ul.horizontal > li {
+    display: inline-block;
+    margin-right: 10pt;
+}
+
+ul.vertical > li {
+    margin-bottom: 5pt;
+}
+
+nav {
+    text-align: center;
+}
+
+body {
+    background-color: #eee;
+}
+
+section {
+    background-color: #fff;
+    margin-bottom: 20pt;
+    padding: 20pt;
+    min-height: 80%;
+}
+
+section.frontPage {
+    min-height: 100%;
+}
+
+#profilePicture {
+    text-align: center;
+}
+
+#profilePicture>img {
+    width: 200pt;
+    padding: 5pt;
+}
+
+/*
+    Columns
+*/
+
+.columns {
+    display: flex;
+}
+
+.column {
+    padding: 20pt;
+    flex: 1;
+}
+
+/*
+    Hyperlinks
+*/
+
+a.outbound {
+    border: 1px solid black;
+}
+
+a.inbound {
+    border: 1px dashed black;
+}
