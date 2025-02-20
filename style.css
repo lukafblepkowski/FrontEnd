@@ -53,6 +53,26 @@ section.frontPage {
 }
 
 /*
+    Skills
+*/
+
+
+#dotted {
+    border: 2pt dotted black;
+    margin: 5pt;
+}
+
+#dashed {
+    border: 2pt dashed black;
+    margin: 5pt;
+}
+
+#solid {
+    border: 2pt solid black;
+    margin: 5pt;
+}
+
+/*
     Hyperlinks
 */
 
