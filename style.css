@@ -3,7 +3,7 @@ html {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    text-shadow: 0.075em 0.075em gray;
+    text-shadow: 0.075em 0.075em #CCC
 }
 
 ul.horizontal > li {
