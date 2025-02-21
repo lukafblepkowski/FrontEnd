@@ -3,16 +3,16 @@ html {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    text-shadow: 1.5pt 1.5pt gray;
+    text-shadow: 0.075em 0.075em gray;
 }
 
 ul.horizontal > li {
     display: inline-block;
-    margin-right: 10pt;
+    margin-right: 0.5em;
 }
 
 ul.vertical > li {
-    margin-bottom: 5pt;
+    margin-bottom: 0.25em;
 }
 
 nav {
@@ -29,8 +29,8 @@ body {
 
 section {
     background-color: #fff;
-    margin-bottom: 20pt;
-    padding: 20pt;
+    margin-bottom: 1em;
+    padding: 1em;
     min-height: 100%;
 }
 
@@ -43,8 +43,8 @@ section.frontPage {
 }
 
 #profilePicture>img {
-    width: 200pt;
-    padding: 5pt;
+    width: 10em;
+    padding: 0.25em;
 }
 
 /*
@@ -56,23 +56,23 @@ section.frontPage {
 }
 
 .column {
-    padding: 20pt;
+    padding: 1em;
     flex: 1;
 }
 
 #dotted {
-    border: 2pt dotted black;
-    margin: 5pt;
+    border: 0.1em dotted black;
+    margin: 0.25em;
 }
 
 #dashed {
-    border: 2pt dashed black;
-    margin: 5pt;
+    border: 0.1em dashed black;
+    margin: 0.25em;
 }
 
 #solid {
-    border: 2pt solid black;
-    margin: 5pt;
+    border: 0.1em solid black;
+    margin: 0.25em;
 }
 
 /*
@@ -80,9 +80,9 @@ section.frontPage {
 */
 
 a.outbound {
-    border: 1px solid black;
+    border: 0.05em solid black;
 }
 
 a.inbound {
-    border: 1px dashed black;
+    border: 0.05em dashed black;
 }
