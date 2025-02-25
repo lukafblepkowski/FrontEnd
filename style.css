@@ -85,18 +85,21 @@ table, td, th {
     text-align: right;
 }
 
-.skill .skill-image {
+.skill-image {
     display: flex;
     width: 8em;
     height: 8em;
-    border: 1px solid green;
+}
+
+.skill-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom;
 }
 
 
-.skill img {
-    width: 8em;
-    border: 1px solid blue;
-}
+
 
 /*
     Hyperlinks
