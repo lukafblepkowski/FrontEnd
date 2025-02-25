@@ -47,8 +47,9 @@ section.frontPage {
 }
 
 #profilePicture>img {
+    box-shadow: 0.05em 0.05em 0.25em gray;
     width: 10em;
-    padding: 0.25em;
+    margin: 0.25em;
 }
 
 table {
@@ -87,17 +88,22 @@ table, td, th {
 
 .skill-image {
     display: flex;
-    width: 8em;
-    height: 8em;
+    width: 6em;
+    height: 6em;
 }
 
 .skill-image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: bottom;
+    box-shadow: 0.05em 0.05em 0.25em gray;
 }
 
+.skill p {
+    font-style: italic;
+    color: black;
+    text-align: center;
+}
 
 
 
@@ -107,8 +113,10 @@ table, td, th {
 
 a.outbound {
     border: 0.05em solid black;
+    box-shadow: 0.05em 0.05em 0.25em gray;
 }
 
 a.inbound {
     border: 0.05em dashed black;
+    box-shadow: 0.05em 0.05em 0.25em gray;
 }
