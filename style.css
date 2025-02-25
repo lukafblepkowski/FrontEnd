@@ -2,8 +2,12 @@ html {
     scroll-behavior: smooth;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    text-shadow: 0.075em 0.075em #CCC
+h1,h2 {
+    text-shadow: 0.075em 0.075em #BBB
+}
+
+h3 {
+    border-bottom: 0.05em dashed black;
 }
 
 ul.horizontal > li {
@@ -47,6 +51,13 @@ section.frontPage {
     padding: 0.25em;
 }
 
+table {
+    width: 100%;
+}
+
+table, td, th {
+    border: 0.05em solid black;
+}
 /*
     Columns
 */
@@ -60,19 +71,31 @@ section.frontPage {
     flex: 1;
 }
 
-#dotted {
-    border: 0.1em dotted black;
-    margin: 0.25em;
+/*
+    Skills
+*/
+
+.skills-flex {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
-#dashed {
-    border: 0.1em dashed black;
-    margin: 0.25em;
+.skill {
+    margin: 0.5em;
+    text-align: right;
 }
 
-#solid {
-    border: 0.1em solid black;
-    margin: 0.25em;
+.skill .skill-image {
+    display: flex;
+    width: 8em;
+    height: 8em;
+    border: 1px solid green;
+}
+
+
+.skill img {
+    width: 8em;
+    border: 1px solid blue;
 }
 
 /*
