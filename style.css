@@ -3,11 +3,13 @@ html {
 }
 
 h1,h2 {
-    text-shadow: 0.075em 0.075em #BBB
+    text-shadow: 0.075em 0.075em #BBB;
+    font-weight: bold;
 }
 
 h3 {
     border-bottom: 0.05em dashed black;
+    text-shadow: 0.075em 0.075em #BBB;
 }
 
 ul.horizontal > li {
@@ -105,8 +107,51 @@ table, td, th {
     text-align: center;
 }
 
+/*
+    Projects
+*/
 
+.projects {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-direction: column;
+}
 
+.project {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+    width: 100%;
+    border: 0.05em dashed black;
+    box-shadow: 0.05em 0.05em 0.25em gray;
+    padding: 0.05em;
+}
+
+.project-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-token {
+    margin-right: 0.5em;
+}
+
+#project-name {
+    text-shadow: 0.075em 0.075em #BBB;
+    font-weight: bold;
+}
+
+#project-type {
+    font-style: italic;
+    color: gray;
+}
+
+#project-release {
+    font-style: italic;
+}
+
+#project-
 /*
     Hyperlinks
 */
