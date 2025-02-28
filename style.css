@@ -51,7 +51,7 @@ section.frontPage {
 }
 
 #profilePicture>img {
-    box-shadow: 0.05em 0.05em 0.25em gray;
+    box-shadow: 0 0 0.25em gray;
     width: 10em;
     margin: 0.25em;
 }
@@ -100,7 +100,7 @@ table, td, th {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    box-shadow: 0.05em 0.05em 0.25em gray;
+    box-shadow: 0 0 0.25em gray;
 }
 
 .skill p {
@@ -116,7 +116,7 @@ table, td, th {
 .projects {
     display: flex;
     width: 90%;
-    margin: auto;
+    margin: 0;
     flex-direction: column;
 }
 
@@ -126,7 +126,7 @@ table, td, th {
     margin: 0.5em;
     width: 100%;
 
-    box-shadow: 0.05em 0.05em 0.25em gray;
+    box-shadow: 0 0 0.25em gray;
     padding: 0.25em;
 }
 
@@ -159,6 +159,40 @@ table, td, th {
     Blogposts
 */
 
+.blogposts {
+    display: flex;
+    width: 90%;
+    margin: 0;
+    flex-direction: column;
+}
+
+.blogpost {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+    width: 100%;
+
+    box-shadow: 0 0 0.25em gray;
+    padding: 0.25em;
+    margin: 0.5em;
+}
+
+.blogpost div {
+    margin: 0.2em;
+}
+
+.blogpost-header {
+    display: flex;
+}
+
+.blogpost-title {
+    text-shadow: 0.075em 0.075em #BBB; 
+    font-weight: bold;    
+}
+
+.blogpost-date {
+    font-style: italic;
+}
 
 /*
     Hyperlinks
