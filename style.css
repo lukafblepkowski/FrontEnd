@@ -31,6 +31,8 @@ nav {
 
 body {
     background-color: #eee;
+    display: flex;
+    flex-direction: column;
 }
 
 section {
