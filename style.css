@@ -235,13 +235,13 @@ table, td, th {
 */
 
 a.outbound {
-    border: 0.05em solid black;
+    border: 0.1em solid black;
     box-shadow: 0.05em 0.05em 0.25em gray;
     vertical-align: middle;
 }
 
 a.inbound {
-    border: 0.05em dashed black;
+    border: 0.1em dashed black;
     box-shadow: 0.05em 0.05em 0.25em gray;
     vertical-align: middle;
 }
@@ -279,10 +279,10 @@ a.inbound {
 }
 
 .login-page button {
-    border: none;
     box-shadow: 0 0 0.25em gray; 
 
     border-radius: 0.2em;
+    border: 0.1em solid black;
 
     font-size: 1em;
     margin: 0;
