@@ -58,6 +58,13 @@ body {
     flex-direction: column;
 }
 
+header {
+    background-color: #fff;
+    margin-bottom: 1em;
+    padding: 1em;
+    min-height: 100%;
+}
+
 section {
     background-color: #fff;
     margin-bottom: 1em;
@@ -65,12 +72,17 @@ section {
     min-height: 100%;
 }
 
-section.final-section {
-    margin-bottom: 0;
+section#nobottom {
+    margin-bottom: 0em;
 }
 
-section#contact {
+footer {
+    background-color: #fff;
+    margin-bottom: 1em;
+    padding: 1em;
     min-height: 30%;
+
+    margin-bottom: 0;
 }
 
 #profilePicture {
@@ -202,7 +214,7 @@ table, td, th {
     margin: 0.5em;
 }
 
-.blogpost div {
+.blogpost div, .blogpost article {
     margin: 0.2em;
 }
 
