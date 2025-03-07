@@ -1,6 +1,14 @@
+/*
+    Scrolling
+*/
+
 html {
     scroll-behavior: smooth;
 }
+
+/*
+    Headers
+*/
 
 h1,h2 {
     text-shadow: 0.075em 0.075em #BBB;
@@ -12,6 +20,10 @@ h3 {
     text-shadow: 0.075em 0.075em #BBB;
 }
 
+/*
+    Lists
+*/
+
 ul.horizontal > li {
     display: inline-block;
     margin-right: 0.5em;
@@ -21,36 +33,37 @@ ul.vertical > li {
     margin-bottom: 0.25em;
 }
 
+/*
+    Hyperlinks
+*/
+
+a.outbound {
+    border: 0.1em solid black;
+    box-shadow: 0.05em 0.05em 0.25em gray;
+    vertical-align: middle;
+}
+
+a.inbound {
+    border: 0.1em dashed black;
+    box-shadow: 0.05em 0.05em 0.25em gray;
+    vertical-align: middle;
+}
+
+/*
+    Navigation
+*/
+
 nav {
     text-align: center;
-}
-
-.nav-set {
-    display: flex;
-}
-
-.nav-main {
-    margin-left: 10%;
-    width: 80%;
-}
-
-.nav-aside {
-    width: 10%;
-    text-align: center;
-    margin: auto;
-}
-
-#lockicon {
-    padding: 0.2em;
-}
-#lockicon img {
-    height: 1em;
-    vertical-align: middle;
 }
 
 #backtotop {
     float: right;
 }
+
+/*
+    Body, Header, Section, Footer structure
+*/
 
 body {
     background-color: #f6f6f6;
@@ -85,23 +98,6 @@ footer {
     margin-bottom: 0;
 }
 
-#profilePicture {
-    text-align: center;
-}
-
-#profilePicture>img {
-    box-shadow: 0 0 0.25em gray;
-    width: 10em;
-    margin: 0.25em;
-}
-
-table {
-    width: 100%;
-}
-
-table, td, th {
-    border: 0.05em solid black;
-}
 /*
     Columns
 */
@@ -113,6 +109,20 @@ table, td, th {
 .column {
     padding: 1em;
     flex: 1;
+}
+
+/*
+    About me
+*/
+
+#profilePicture {
+    text-align: center;
+}
+
+#profilePicture>img {
+    box-shadow: 0 0 0.25em gray;
+    width: 10em;
+    margin: 0.25em;
 }
 
 /*
@@ -246,22 +256,6 @@ table, td, th {
 
 #education {
     min-height: 30%;
-}
-
-/*
-    Hyperlinks
-*/
-
-a.outbound {
-    border: 0.1em solid black;
-    box-shadow: 0.05em 0.05em 0.25em gray;
-    vertical-align: middle;
-}
-
-a.inbound {
-    border: 0.1em dashed black;
-    box-shadow: 0.05em 0.05em 0.25em gray;
-    vertical-align: middle;
 }
 
 /*
