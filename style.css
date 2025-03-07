@@ -268,7 +268,7 @@ a.inbound {
     Admin
 */
 
-.login-page {
+.admin-page {
     min-height: 100%;
     max-height: 100%;
 
@@ -278,7 +278,7 @@ a.inbound {
     text-align: center;
 }
 
-.login-page input {
+.admin-page input {
     vertical-align: middle;
     width: 20em;
     height: 2em;
@@ -292,11 +292,11 @@ a.inbound {
     font-family: inherit;
 }
 
-.login-page label {
+.admin-page label {
     text-shadow: 0.075em 0.075em #BBB;
 }
 
-.login-page button {
+.admin-page button {
     box-shadow: 0 0 0.25em gray; 
 
     border-radius: 0.2em;
@@ -309,6 +309,19 @@ a.inbound {
     font-family: inherit;
 }
 
-.login-header {
+.admin-page textarea {
+    width: 30em;
+    height: 20em;
+
+    border-radius: 0.2em;
+    border: 0.125em solid black;
+
+    box-shadow: 0 0 0.25em gray; 
+
+    font-family: inherit;
+    font-size: 0.75em;
+}
+
+.admin-header {
     padding: 1em;
 }
