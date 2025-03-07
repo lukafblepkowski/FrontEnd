@@ -241,6 +241,14 @@ table, td, th {
 }
 
 /*
+    Education
+*/
+
+#education {
+    min-height: 30%;
+}
+
+/*
     Hyperlinks
 */
 
