@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    if((!isset($_SESSION['logged-in'])||!$_SESSION['logged-in'])) {
+        #Redirect if not logged in
+        header("Location: login.html");
+        exit();
+    }
+?>
+
 <html>
     <head>
         <title>Luka FB Lepkowski</title>
@@ -17,9 +26,14 @@
             
             <div class="admin-header">
                 <h1>New blog post</h1>
+                <?php
+                    if(isset($_GET['post']) && $_GET['post'] == "fail") {
+                        echo "<br>Post was unsuccessful. Please try again.";
+                    }
+                ?>
             </div>
 
-            <form>
+            <form action="addPost.php" method="POST">
                 <div class="input-group">
                     <label for="title">Title</label><br/>
                     <input type="text" id="title" name="title" required>

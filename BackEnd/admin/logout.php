@@ -1,6 +1,7 @@
 <?php
     session_start();
-    session_destroy();
+    $_SESSION["logged-in"] = false;
+    $_SESSION["email"] = null;
     header("Location: ../");
     exit();
 ?>

@@ -2,16 +2,15 @@
     #Password is 12345678
 
     session_start();
-    session_destroy();
 
-    if(!isset($_SESSION['email']) && $_SERVER["REQUEST_METHOD"] === "POST") {
+    if((!isset($_SESSION['logged-in'])||!$_SESSION['logged-in']) && $_SERVER["REQUEST_METHOD"] === "POST") {
         $given_email = $_POST['email'];
         $given_password = $_POST['password'];
 
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "login";
+        $dbname = "website";
 
         $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -24,13 +23,17 @@
         $sql->bind_param("s", $given_email);
         $sql->execute();
         $result = $sql->get_result();
-
+        
+        #Too many users found
         if($result->num_rows > 1) {
             exit("Email collision !");
         }
-
+        
+        #No users found
         if($result->num_rows < 1) {
-            print("Wrong username/password!");
+            #Wrong username/password
+            header("Location: login.html");
+            exit();
         }
         
         $row = $result->fetch_assoc();
@@ -38,11 +41,12 @@
 
         if(password_verify($given_password, $retrieved_hash)) {
             #Correct password
+            $_SESSION['logged-in'] = true;
             $_SESSION['email'] = $given_email;
             header("Location: addEntry.php");
             exit();
         } else {
-            #Wrong password
+            #Wrong username/password
             header("Location: login.html");
             exit();
         }
