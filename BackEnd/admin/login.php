@@ -1,7 +1,9 @@
 <?php
     #Password is 12345678
 
-    if($_SERVER["REQUEST_METHOD"] === "POST") {
+    session_start();
+
+    if(!isset($_SESSION['email']) && $_SERVER["REQUEST_METHOD"] === "POST") {
         $given_email = $_POST['email'];
         $given_password = $_POST['password'];
 
@@ -35,8 +37,11 @@
 
         if(password_verify($given_password, $retrieved_hash)) {
             echo "Success!";
+            $_SESSION['email'] = $given_email;
         } else {
             echo "Wrong username/password!";
         }
+    } else {
+        echo "Session already active.";
     }
 ?>
