@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <html>
     <head>
         <title>Luka FB Lepkowski</title>
@@ -18,7 +22,7 @@
                     <li><a class="inbound" href="#skills">Skills</a></li>
                     <li><a class="inbound" href="#education">Education</a></li>
                     <li><a class="inbound" href="projects.html">Projects</a></li>
-                    <li><a class="inbound" href="blog.html">Blog</a></li>
+                    <li><a class="inbound" href="viewBlog.php">Blog</a></li>
                     <li><a class="inbound" href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -221,7 +225,16 @@
                 <li><a class="outbound" href="https://www.linkedin.com/in/luka-fb-lepkowski-522b68324/">linkedin</a></li>
                 <li><a class="outbound" href="https://bsky.app/profile/spunky2.com">bluesky</a></li>
             </ul>
-            <a class="inbound" id="admin" href="admin/index.html">admin</a><br/>
+            <?php
+                $admin = isset($_SESSION['logged-in']) && $_SESSION['logged-in'];
+
+                $login_text = $admin ? "log out" : "admin";
+                $login_href = $admin ? "admin/logout.php" : "admin/login.html";
+            ?>
+
+            <a class="inbound" id="admin" href=" <?php echo htmlspecialchars($login_href)?>">
+                <?php echo htmlspecialchars($login_text)?>
+            </a><br/>
         </footer>
     </body>
 </html>

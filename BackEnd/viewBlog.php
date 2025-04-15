@@ -62,7 +62,7 @@
                     <h2>Blog</h2>
                 </div>
                 <div class="column">
-                    <a class="inbound" id="backtotop" href="index.html">back to front page</a>
+                    <a class="inbound" id="backtotop" href="index.php">back to front page</a>
                 </div>
             </div>
 
