@@ -219,12 +219,6 @@
             Write to me at: <u><i>lukalepkowski@gmail.com</i></u><br/>
             @ me on BlueSky at: <u><i>@spunky2.com</i></u>
 
-            <ul class="horizontal">
-                <li><a class="outbound" href="https://github.com/lukafblepkowski">github</a></li>
-                <li><a class="outbound" href="https://spunky2.itch.io/">itch.io</a></li>
-                <li><a class="outbound" href="https://www.linkedin.com/in/luka-fb-lepkowski-522b68324/">linkedin</a></li>
-                <li><a class="outbound" href="https://bsky.app/profile/spunky2.com">bluesky</a></li>
-            </ul>
             <?php
                 $admin = isset($_SESSION['logged-in']) && $_SESSION['logged-in'];
 
@@ -232,9 +226,27 @@
                 $login_href = $admin ? "admin/logout.php" : "admin/login.html";
             ?>
 
-            <a class="inbound" id="admin" href=" <?php echo htmlspecialchars($login_href)?>">
-                <?php echo htmlspecialchars($login_text)?>
-            </a><br/>
+            <div id="admin">
+                <?php
+                    if($admin) { 
+                ?>
+                <a class="inbound" id="admin" href="admin/addEntry.php">
+                    add post
+                </a><br/>
+                <?php
+                    }
+                ?>
+                <a class="inbound" id="admin" href=" <?php echo htmlspecialchars($login_href)?>">
+                    <?php echo htmlspecialchars($login_text)?>
+                </a>
+            </div>
+
+            <ul class="horizontal">
+                <li><a class="outbound" href="https://github.com/lukafblepkowski">github</a></li>
+                <li><a class="outbound" href="https://spunky2.itch.io/">itch.io</a></li>
+                <li><a class="outbound" href="https://www.linkedin.com/in/luka-fb-lepkowski-522b68324/">linkedin</a></li>
+                <li><a class="outbound" href="https://bsky.app/profile/spunky2.com">bluesky</a></li>
+            </ul>
         </footer>
     </body>
 </html>
