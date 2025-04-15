@@ -1,0 +1,321 @@
+/*
+    Scrolling
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*
+    Headers
+*/
+
+h1,h2 {
+    text-shadow: 0.075em 0.075em #BBB;
+    font-weight: bold;
+}
+
+h3 {
+    border-bottom: 0.05em dashed black;
+    text-shadow: 0.075em 0.075em #BBB;
+}
+
+/*
+    Lists
+*/
+
+ul.horizontal > li {
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+ul.vertical > li {
+    margin-bottom: 0.25em;
+}
+
+/*
+    Hyperlinks
+*/
+
+a.outbound {
+    border: 0.1em solid black;
+    box-shadow: 0.05em 0.05em 0.25em gray;
+    vertical-align: middle;
+}
+
+a.inbound {
+    border: 0.1em dashed black;
+    box-shadow: 0.05em 0.05em 0.25em gray;
+    vertical-align: middle;
+}
+
+/*
+    Navigation
+*/
+
+nav {
+    text-align: center;
+}
+
+#backtotop {
+    float: right;
+}
+
+/*
+    Body, Header, Section, Footer structure
+*/
+
+body {
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #fff;
+    margin-bottom: 1em;
+    padding: 1em;
+    min-height: 100%;
+}
+
+section {
+    background-color: #fff;
+    margin-bottom: 1em;
+    padding: 1em;
+    min-height: 100%;
+}
+
+section#nobottom {
+    margin-bottom: 0em;
+}
+
+footer {
+    background-color: #fff;
+    margin-bottom: 1em;
+    padding: 1em;
+    min-height: 30%;
+
+    margin-bottom: 0;
+}
+
+/*
+    Columns
+*/
+
+.columns {
+    display: flex;
+}
+
+.column {
+    padding: 1em;
+    flex: 1;
+}
+
+/*
+    About me
+*/
+
+#profilePicture {
+    text-align: center;
+}
+
+#profilePicture>img {
+    box-shadow: 0 0 0.25em gray;
+    width: 10em;
+    margin: 0.25em;
+}
+
+/*
+    Skills
+*/
+
+.skills-flex {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.skill {
+    margin: 0.5em;
+    text-align: right;
+}
+
+.skill-image {
+    display: flex;
+    width: 6em;
+    height: 6em;
+}
+
+.skill-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    box-shadow: 0 0 0.25em gray;
+}
+
+.skill p {
+    font-style: italic;
+    color: black;
+    text-align: center;
+}
+
+/*
+    Projects
+*/
+
+.projects {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+
+    box-shadow: 0 0 0.25em gray;
+    padding: 0.25em;
+}
+
+.project-row {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0.1em;
+}
+
+.project-token {
+    margin-right: 0.5em;
+}
+
+#project-name {
+    text-shadow: 0.075em 0.075em #BBB;
+    font-weight: bold;
+}
+
+#project-type {
+    font-style: italic;
+    color: gray;
+}
+
+#project-release {
+    font-style: italic;
+}
+
+/*
+    Blogposts
+*/
+
+.blogposts {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+}
+
+.blogpost {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+
+    box-shadow: 0 0 0.25em gray;
+    padding: 0.25em;
+    margin: 0.5em;
+}
+
+.blogpost div, .blogpost article {
+    margin: 0.2em;
+}
+
+.blogpost-header {
+    display: flex;
+}
+
+.blogpost-title {
+    text-shadow: 0.075em 0.075em #BBB; 
+    font-weight: bold;    
+}
+
+.blogpost-date {
+    font-style: italic;
+}
+
+/*
+    Contact
+*/
+
+#admin {
+    float: right;
+    margin: 1em;
+}
+
+/*
+    Education
+*/
+
+#education {
+    min-height: 30%;
+}
+
+/*
+    Admin
+*/
+
+.admin-page {
+    min-height: 100%;
+    max-height: 100%;
+
+    margin: 0em;
+    padding: 0em;
+    
+    text-align: center;
+}
+
+.admin-page input {
+    vertical-align: middle;
+    width: 20em;
+    height: 2em;
+
+    box-sizing: border-box;
+    box-shadow: 0 0 0.25em gray; 
+
+    border-radius: 0.2em;
+    
+
+    font-family: inherit;
+}
+
+.admin-page label {
+    text-shadow: 0.075em 0.075em #BBB;
+}
+
+.admin-page button {
+    box-shadow: 0 0 0.25em gray; 
+
+    border-radius: 0.2em;
+    border: 0.1em solid black;
+
+    font-size: 1em;
+    margin: 0;
+    
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.admin-page textarea {
+    width: 30em;
+    height: 20em;
+
+    border-radius: 0.2em;
+    border: 0.125em solid black;
+
+    box-shadow: 0 0 0.25em gray; 
+
+    font-family: inherit;
+    font-size: 0.75em;
+}
+
+.admin-header {
+    padding: 1em;
+}
