@@ -2,6 +2,7 @@
     #Password is 12345678
 
     session_start();
+    session_destroy();
 
     if(!isset($_SESSION['email']) && $_SERVER["REQUEST_METHOD"] === "POST") {
         $given_email = $_POST['email'];
@@ -29,19 +30,25 @@
         }
 
         if($result->num_rows < 1) {
-            echo "Wrong username/password!";
+            print("Wrong username/password!");
         }
         
         $row = $result->fetch_assoc();
         $retrieved_hash = $row["password_hash"]; 
 
         if(password_verify($given_password, $retrieved_hash)) {
-            echo "Success!";
+            #Correct password
             $_SESSION['email'] = $given_email;
+            header("Location: addEntry.php");
+            exit();
         } else {
-            echo "Wrong username/password!";
+            #Wrong password
+            header("Location: login.html");
+            exit();
         }
     } else {
-        echo "Session already active.";
+        #Session already active
+        header("Location: addEntry.php");
+        exit();
     }
 ?>
