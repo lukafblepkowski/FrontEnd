@@ -17,7 +17,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-        <script src="addPost.js"></script>
+        <script src="addEntry.js"></script>
     </head>
 
     <body>
@@ -34,24 +34,45 @@
                     }
                 ?>
             </div>
+            
+            <div class="hidden" id="preview1">
+                <article class="blogpost">
+                    <div class="blogpost-header">
+                        <div class="blogpost-title">
+                            Title
+                        </div>
 
-            <form id="form" action="addPost.php" method="POST">
-                <div class="input-group">
-                    <label for="title">Title</label><br/>
-                    <input type="text" id="title" name="title">
-                </div>
+                        <div class="blogpost-date">
+                            Written
+                        </div>
+                    </div>
+                    
+                    <div class="blogpost-content">
+                        Content
+                    </div>
+                </article>
+            </div>
 
-                <br/>
-                <div class="input-group">
-                    <label for="content">Content</label><br/>
-                    <textarea type="text" id="content" name="content"></textarea>
-                </div>
+            <div id="preview2">
+                <form id="form" action="addPost.php" method="POST">
+                    <div class="input-group">
+                        <label for="title">Title</label><br/>
+                        <input type="text" id="title" name="title">
+                    </div>
 
-                <br>
+                    <br/>
+                    <div class="input-group">
+                        <label for="content">Content</label><br/>
+                        <textarea type="text" id="content" name="content"></textarea>
+                    </div>
+            </div>
+                    <br>
 
-                <button type="submit">Post</button>
-                <button type="button" id="clear">Clear</button>
-            </form>
+                    <button type="submit">Post</button>
+                    <button type="button" id="clear">Clear</button>
+                    <button type="button" id="preview">Preview</button>
+                </form>
+
         </section>
     </body>
 </html>

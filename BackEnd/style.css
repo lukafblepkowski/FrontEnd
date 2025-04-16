@@ -319,3 +319,11 @@ footer {
 .admin-header {
     padding: 1em;
 }
+
+/*
+    Preview
+*/
+
+.hidden {
+    display: none;
+}
