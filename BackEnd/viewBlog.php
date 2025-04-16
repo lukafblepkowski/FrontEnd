@@ -1,4 +1,16 @@
 <?php
+    function ordinal($n) {
+        if($n >= 11 && $n <= 13) {
+            return $n."th";
+        }
+        switch($n%10){
+            case 1: return $n."st";
+            case 2: return $n."nd";
+            case 3: return $n."rd";
+            default: return $n."th";
+        }
+    }
+
     session_start();
 
     $servername = "localhost";
@@ -42,6 +54,7 @@
         header("Location: ");
         exit();
     }
+
 ?>
 
 <html>
@@ -63,6 +76,7 @@
                 </div>
                 <div class="column">
                     <a class="inbound" id="backtotop" href="index.php">back to front page</a>
+                    <a class="inbound" id="newpost" href="admin/addEntry.php">new post</a>
                 </div>
             </div>
 
@@ -83,7 +97,8 @@
                                 (Written
                                 <?php 
                                     $time = strtotime($row['timestamp']);
-                                    echo date("F j Y", $time);
+                                    $dnt = ordinal(date("j", $time)) . date(" F Y, G:i", $time) . " UTC";
+                                    echo $dnt;
                                 ?>)
                             </div>
                         </div>

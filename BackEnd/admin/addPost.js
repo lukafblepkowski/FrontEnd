@@ -1,6 +1,9 @@
 function clear() {
-    document.getElementById("title").value = "";
-    document.getElementById("content").value = "";
+    confirmed = confirm("Are you sure you want to clear the post and start again ?");
+    if(confirmed) { 
+        document.getElementById("title").value = "";
+        document.getElementById("content").value = "";
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -17,7 +20,13 @@ document.addEventListener("DOMContentLoaded", function(){
         //What a strange language javascript is
         if(!title || !content) {
             e.preventDefault();
-            alert("Blank title/content not allowed.")
+            alert("Blank title/content not allowed.");
+            return;
+        }
+
+        confirmed = confirm("Are you sure you want to post this ? There's no going back !");
+        if(!confirmed) {
+            e.preventDefault();
         }
     })
 })
