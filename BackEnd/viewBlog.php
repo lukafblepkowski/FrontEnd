@@ -11,6 +11,35 @@
         }
     }
 
+    # QuickSort Algorithm by timestamp
+    function quickSortByTimestamp($array) {
+        if (count($array) < 2) {
+            return $array;
+        }
+
+        $pivot_index = floor(count($array) / 2);
+        $pivot = $array[$pivot_index]["timestamp"];
+        $pivot_row = $array[$pivot_index];
+        
+        $left = [];
+        $right = [];
+        
+        foreach ($array as $index => $item) {
+            if ($index == $pivot_index) continue; // Skip the pivot
+            if ($item["timestamp"] <= $pivot) {
+                $left[] = $item;
+            } else {
+                $right[] = $item;
+            }
+        }
+
+        return array_merge(
+            quickSortByTimestamp($right), // Sort DESC: newer first
+            [$pivot_row],
+            quickSortByTimestamp($left)
+        );
+    }
+
     session_start();
 
     $servername = "localhost";
@@ -55,6 +84,7 @@
         exit();
     }
 
+    $rows = quickSortByTimestamp($rows);
 ?>
 
 <html>
