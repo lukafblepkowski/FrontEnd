@@ -16,6 +16,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <script src="addPost.js"></script>
     </head>
 
     <body>
@@ -33,22 +35,22 @@
                 ?>
             </div>
 
-            <form action="addPost.php" method="POST">
+            <form id="form" action="addPost.php" method="POST">
                 <div class="input-group">
                     <label for="title">Title</label><br/>
-                    <input type="text" id="title" name="title" required>
+                    <input type="text" id="title" name="title">
                 </div>
 
                 <br/>
                 <div class="input-group">
                     <label for="content">Content</label><br/>
-                    <textarea type="text" id="content" name="content" required></textarea>
+                    <textarea type="text" id="content" name="content"></textarea>
                 </div>
 
                 <br>
 
                 <button type="submit">Post</button>
-                <button type="reset">Clear</button>
+                <button type="button" id="clear">Clear</button>
             </form>
         </section>
     </body>

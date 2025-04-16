@@ -42,6 +42,7 @@
         $sql->bind_param("sss", $retrieved_id,$given_content,$given_title);
         if($sql->execute()) {
             #Post Succesful
+            header("Location: ../viewBlog.php");
         } else {
             #Post Unsuccesful
             header("Location: addEntry.php?post=fail");
@@ -49,8 +50,8 @@
         }
     
     } else {
-
         #Not logged in, somehow
         header("Location: ../");
+        exit();
     }
 ?>
