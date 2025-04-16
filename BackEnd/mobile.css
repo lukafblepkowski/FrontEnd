@@ -1,0 +1,38 @@
+a,h1,h2,h3,h4,h5,h6,div,li,p {
+	font-size: 2rem;
+}
+
+ul.horizontal > li {
+    display: list-item;
+    text-align: left;
+    margin-bottom: 0.5em;
+}
+
+ul.vertical > li {
+    display: list-item;
+    text-align: left;
+    margin-bottom: 0.5em;
+}
+
+.columns {
+    display: inline;
+}
+
+.column {
+    padding: 0em;
+    flex: 0;
+}
+
+.skills-flex {
+    flex-direction: column;
+}
+
+.skill {
+    display: flex;
+    margin: 0.5em;
+    text-align: right;
+}
+
+.skill p {
+    margin-left: 0.5em;
+}
