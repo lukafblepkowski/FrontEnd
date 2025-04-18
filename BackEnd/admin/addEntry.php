@@ -12,7 +12,8 @@
         <title>Luka FB Lepkowski</title>
         <link rel="stylesheet" href="../reset.css">
         <link rel="stylesheet" href="../style.css">
-        <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 1000px)">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,7 +74,6 @@
                     <button type="button" id="clear">Clear</button>
                     <button type="button" id="preview">Preview</button>
                 </form>
-
         </section>
     </body>
 </html>

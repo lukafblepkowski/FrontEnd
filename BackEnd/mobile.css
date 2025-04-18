@@ -1,3 +1,7 @@
+html {
+    font-size: 10px;
+}
+
 a,h1,h2,h3,h4,h5,h6,div,li,p {
 	font-size: 2rem;
 }
@@ -35,4 +39,8 @@ ul.vertical > li {
 
 .skill p {
     margin-left: 0.5em;
+}
+
+img {
+    max-width: 100%;
 }

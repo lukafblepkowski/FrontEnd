@@ -104,6 +104,7 @@ footer {
 
 .columns {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .column {
@@ -181,6 +182,7 @@ footer {
 .project-row {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 
     margin: 0.1em;
 }
@@ -241,6 +243,37 @@ footer {
     font-style: italic;
 }
 
+.blank-form {
+    background-color: #F99;
+    mix-blend-mode: multiply;
+}
+
+select {
+    box-shadow: 0 0 0.25em gray; 
+
+    border-radius: 0.2em;
+    border: 0.1em solid black;
+
+    font-size: 1em;
+    margin: 0;
+
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.search-button {
+    box-shadow: 0 0 0.25em gray; 
+
+    border-radius: 0.2em;
+    border: 0.1em solid black;
+
+    font-size: 1em;
+    margin: 0;
+
+    font-weight: bold;
+    font-family: inherit;
+}
+
 /*
     Contact
 */
@@ -281,7 +314,6 @@ footer {
     box-shadow: 0 0 0.25em gray; 
 
     border-radius: 0.2em;
-    
 
     font-family: inherit;
 }

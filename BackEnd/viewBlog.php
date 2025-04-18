@@ -1,4 +1,9 @@
 <?php
+    function getMonth($row) {
+        $time = strtotime($row['timestamp']);
+        return date('F', $time) ." ". date('Y', $time);
+    }
+
     function ordinal($n) {
         if($n >= 11 && $n <= 13) {
             return $n."th";
@@ -92,7 +97,8 @@
         <title>Luka FB Lepkowski</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 1000px)">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -110,12 +116,52 @@
                     <a class="inbound" id="newpost" href="admin/addEntry.php">new post</a>
                 </div>
             </div>
+            
+            <form method="GET" action="viewBlog.php">
+                <label for="months">Month:</label>
+                <select id="months" name="months">
+                    <option value="All">All Months</option>
+
+                <?php
+                    $searchterm = "All";
+                    if(isset($_GET['months'])) {
+                        $searchterm = $_GET['months'];
+                    }
+
+                    $current = [];
+                    for($i = 0; $i < count($rows); $i++) {
+                        $mon = getMonth($rows[$i]);
+
+                        if(!in_array($mon, $current)) {
+                            $mon_strp = str_replace(' ', '_',$mon);
+                            $selected = "";
+                            if($mon_strp == $searchterm) {
+                                $selected = "selected";
+                            }
+                            echo "<option ".$selected." value=".$mon_strp.">".$mon."</option>";
+                            array_push($current, $mon);   
+                        }
+                    }
+                ?>
+
+                </select>
+                <button class="search-button">Search</button>
+            </form>
 
             <div class="blogposts">
-                <?php 
+                <?php
+                    $prev_month = null;
                     for($i = 0; $i < count($rows); $i++) {
                         $row = $rows[$i];
+                        $this_month = getMonth($row);
+                        $this_month_strp = str_replace(' ', '_',$this_month);
+                        if($searchterm == "All" || $this_month_strp == $searchterm) {
+                            if($prev_month != $this_month) {
+                                echo "<br><h3>".$this_month."</h3>";
+                            }
+                            $prev_month = $this_month;
                 ?>
+
                     <article class="blogpost">
                         <div class="blogpost-header">
                             <div class="blogpost-title">
@@ -137,7 +183,7 @@
                         <div class="blogpost-content">
                             <?php
                                 #NL2BR converts new lines into <br> tag 
-                                echo nl2br(htmlspecialchars($row['content']))
+                                echo nl2br($row['content']);
                             ?>
                         </div>
 
@@ -148,7 +194,7 @@
                         </div>
                     </article>
                 <?php
-                    }
+                    }}
                 ?>
             </div>
         </section>
